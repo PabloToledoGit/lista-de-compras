@@ -24,6 +24,7 @@ function salvarItens() {
     listaDeItens.push({
 
         valor: comprasItens,
+        checar: false,
     })
 }
 
@@ -46,6 +47,13 @@ function mostrarItem() {
     });
 
 
-    const inputsCheck = document.querySelectorAll
+    const inputsCheck = document.querySelectorAll('input[type="checkbox"]')
+
+    inputsCheck.forEach((i) => {
+        i.addEventListener('click', (evento) => {
+           const numeroDoElemento = evento.target.parentElement.parentElement.getAttribute('data-value')
+        })
+
+    })
     
 }
